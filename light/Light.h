@@ -21,6 +21,7 @@
 #include <unordered_map>
 
 using ::android::hardware::Return;
+using ::android::hardware::light::V2_0::Flash;
 using ::android::hardware::light::V2_0::ILight;
 using ::android::hardware::light::V2_0::LightState;
 using ::android::hardware::light::V2_0::Status;

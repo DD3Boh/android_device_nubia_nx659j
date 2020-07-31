@@ -23,11 +23,16 @@
 #include <unistd.h>
 
 #define PANEL_LED       "/sys/class/backlight/panel0-backlight/"
+#define BLUE_LED        "/sys/class/leds/blue"
+#define GREEN_LED       "/sys/class/leds/green"
+#define RED_LED         "/sys/class/leds/red"
 
 #define BRIGHTNESS      "brightness"
+#define BREATH          "breath"
 #define MAX_BRIGHTNESS  "max_brightness"
 
 // Max brightness
+constexpr auto kMaxLedBrightness = 255;
 constexpr auto kMaxPanelBrightness = 4095;
 
 namespace {
@@ -70,12 +75,18 @@ static void handleBacklight(const LightState& state) {
     WriteToFile(PANEL_LED BRIGHTNESS, brightness);
 }
 
+static void handleNotification(const LightState&) {
+    WriteToFile(RED_LED BRIGHTNESS, kMaxLedBrightness);
+}
+
+
 static inline bool isLit(const LightState& state) {
     return state.color & 0x00ffffff;
 }
 
 /* Keep sorted in the order of importance. */
 static std::vector<LightBackend> backends = {
+    { Type::BATTERY, handleNotification },
     { Type::BACKLIGHT, handleBacklight },
 };
 
