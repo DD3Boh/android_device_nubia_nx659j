@@ -55,7 +55,8 @@ public class RefreshRate extends PreferenceActivity {
         @Override
         public void onResume() {
             super.onResume();
-            updateValuesAndSummaries();
+            mPrefRefreshRate.setValue(mPrefRefreshRate.getValue());
+            mPrefRefreshRate.setSummary(mPrefRefreshRate.getEntry());
         }
 
         public static void writeTouchRefresh(int fps) {
@@ -74,10 +75,6 @@ public class RefreshRate extends PreferenceActivity {
                 FileUtils.writeLine(GAMEMODE_PATH, "0");
         }
 
-        private void updateValuesAndSummaries() {
-            mPrefRefreshRate.setSummary(mPrefRefreshRate.getEntry());
-        }
-
         private Preference.OnPreferenceChangeListener PrefListener =
             new Preference.OnPreferenceChangeListener() {
                 @Override
@@ -89,9 +86,10 @@ public class RefreshRate extends PreferenceActivity {
                         setFPS(fps);
                         SettingsUtils.putInt(getActivity(), KEY_REFRESH_RATE, fps);
                         writeTouchRefresh(fps);
+                        mPrefRefreshRate.setValue(mPrefRefreshRate.getValue());
+                        mPrefRefreshRate.setSummary(mPrefRefreshRate.getEntry());
                     }
 
-                    updateValuesAndSummaries();
                     return true;
                 }
             };
