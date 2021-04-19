@@ -1239,18 +1239,6 @@ vendor/lib64/vendor.nubia.ifaa@1.0-impl.so
 # PD Mapper
 vendor/bin/pd-mapper
 
-# Perf
-vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
-vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
-vendor/lib/libqti-iopd-client.so
-vendor/lib/libqti-iopd.so
-vendor/lib/vendor.qti.hardware.iop@1.0.so
-vendor/lib/vendor.qti.hardware.iop@2.0.so
-vendor/lib64/libqti-iopd-client.so
-vendor/lib64/libqti-iopd.so
-vendor/lib64/vendor.qti.hardware.iop@1.0.so
-vendor/lib64/vendor.qti.hardware.iop@2.0.so
-
 # Peripheral Manager
 vendor/bin/pm-proxy
 vendor/bin/pm-service
