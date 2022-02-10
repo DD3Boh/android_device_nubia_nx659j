@@ -72,6 +72,9 @@ endif
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_QCOM := true
 
+# Biometrics
+TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.NX659J
+
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := kona
