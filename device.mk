@@ -285,8 +285,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Parts
-PRODUCT_PACKAGES += \
-    NubiaParts
+#PRODUCT_PACKAGES += \
+#    NubiaParts
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
