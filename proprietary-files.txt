@@ -1533,6 +1533,7 @@ vendor/lib/libssc.so
 vendor/lib/sensors.ssc.so
 vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
+vendor/lib64/ffbm.sensors.oem.so
 vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
 vendor/lib64/libsns_device_mode_stub.so
