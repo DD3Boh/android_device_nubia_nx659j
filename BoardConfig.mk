@@ -74,6 +74,7 @@ BOARD_HAVE_BLUETOOTH_QCOM := true
 
 # Biometrics
 TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.NX659J
+TARGET_USES_FOD_ZPOS := true
 
 # Bootloader
 TARGET_NO_BOOTLOADER := true
