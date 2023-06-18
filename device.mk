@@ -275,6 +275,7 @@ PRODUCT_PACKAGES += \
     NubiaCellBroadcastReceiver \
     NubiaFrameworks \
     NubiaLineageSettings \
+    NubiaLineageSystemUI \
     NubiaSettings \
     NubiaSystemUI \
     NubiaTelecomm \
