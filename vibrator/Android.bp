@@ -2,7 +2,7 @@ Common_CFlags = ["-Wall"]
 Common_CFlags += ["-Werror"]
 
 cc_library_shared {
-    name: "vendor.qti.hardware.vibrator.impl.NX659J",
+    name: "vendor.qti.hardware.vibrator.impl.nx659j",
     vendor: true,
     cflags: Common_CFlags,
     srcs: [
@@ -20,12 +20,12 @@ cc_library_shared {
 }
 
 cc_binary {
-    name: "vendor.qti.hardware.vibrator.service.NX659J",
+    name: "vendor.qti.hardware.vibrator.service.nx659j",
     vendor: true,
     relative_install_path: "hw",
-    init_rc: ["vendor.qti.hardware.vibrator.service.NX659J.rc"],
+    init_rc: ["vendor.qti.hardware.vibrator.service.nx659j.rc"],
     vintf_fragments: [
-        "vendor.qti.hardware.vibrator.service.NX659J.xml",
+        "vendor.qti.hardware.vibrator.service.nx659j.xml",
     ],
     cflags: Common_CFlags,
     srcs: [
@@ -37,12 +37,12 @@ cc_binary {
         "libbase",
         "libbinder_ndk",
         "android.hardware.vibrator-V1-ndk",
-        "vendor.qti.hardware.vibrator.impl.NX659J",
+        "vendor.qti.hardware.vibrator.impl.nx659j",
     ],
 }
 
 cc_library_shared {
-    name: "vendor.qti.hardware.vibrator.offload.impl.NX659J",
+    name: "vendor.qti.hardware.vibrator.offload.impl.nx659j",
     vendor: true,
     cflags: Common_CFlags + ["-DTARGET_SUPPORTS_OFFLOAD"],
     srcs: [
@@ -62,12 +62,12 @@ cc_library_shared {
 }
 
 cc_binary {
-    name: "vendor.qti.hardware.vibrator.offload.service.NX659J",
+    name: "vendor.qti.hardware.vibrator.offload.service.nx659j",
     vendor: true,
     relative_install_path: "hw",
-    init_rc: ["vendor.qti.hardware.vibrator.offload.service.NX659J.rc"],
+    init_rc: ["vendor.qti.hardware.vibrator.offload.service.nx659j.rc"],
     vintf_fragments: [
-        "vendor.qti.hardware.vibrator.offload.service.NX659J.xml",
+        "vendor.qti.hardware.vibrator.offload.service.nx659j.xml",
     ],
     cflags: Common_CFlags + ["-DTARGET_SUPPORTS_OFFLOAD"],
     srcs: [
@@ -79,6 +79,6 @@ cc_binary {
         "libbase",
         "libbinder_ndk",
         "android.hardware.vibrator-V1-ndk",
-        "vendor.qti.hardware.vibrator.offload.impl.NX659J",
+        "vendor.qti.hardware.vibrator.offload.impl.nx659j",
     ],
 }

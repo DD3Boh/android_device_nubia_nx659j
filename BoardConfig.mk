@@ -26,7 +26,7 @@ BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 TARGET_BOARD_PLATFORM := kona
-DEVICE_PATH := device/nubia/NX659J
+DEVICE_PATH := device/nubia/nx659j
 
 # Architecture
 TARGET_ARCH := arm64
@@ -73,7 +73,7 @@ endif
 BOARD_HAVE_BLUETOOTH_QCOM := true
 
 # Biometrics
-TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.NX659J
+TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.nx659j
 TARGET_USES_FOD_ZPOS := true
 
 # Bootloader
