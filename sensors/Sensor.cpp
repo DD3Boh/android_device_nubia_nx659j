@@ -320,11 +320,17 @@ void SysfsPollingOneShotSensor::run() {
                 continue;
             }
 
+            // Debug mPolls events contained in the if clause below.
+            ALOGD("udfps: mPolls[1] revents: %d, events: %d", mPolls[1].revents, mPolls[1].events);
+            ALOGD("udfps: readBool: %d, mPollFd: %d", readBool(mPollFd, true), mPollFd);
+            ALOGD("udfps: mPolls[0] revents: %d, events: %d", mPolls[0].revents, mPolls[0].events);
             if (mPolls[1].revents == mPolls[1].events && readBool(mPollFd, true /* seek */)) {
                 activate(false, false, false);
                 mCallback->postEvents(readEvents(), isWakeUpSensor());
+                ALOGD("udfps: Inside the first if clause");
             } else if (mPolls[0].revents == mPolls[0].events) {
                 readBool(mWaitPipeFd[0], false /* seek */);
+                ALOGD("udfps: Inside the second if clause");
             }
         }
     }
